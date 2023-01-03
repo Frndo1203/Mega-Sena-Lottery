@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">MegaSena</string>
-    <string name="title">Good Luck!</string>
-    <string name="number_hint">How many numbers to generate?</string>
+    <string name="app_name">Bet Generator</string>
+    <string name="title">Boost your chances!</string>
+    <string name="number_hint">Dozens</string>
     <string name="number_generator">Generate Numbers</string>
+    <string name="min_bet">min: 6</string>
+    <string name="max_bet">max: 15</string>
 </resources>
