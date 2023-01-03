@@ -16,6 +16,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="f5fd7905-4c0f-4f79-867d-201a69c1fede" name="Changes" comment="" />
+=======
     <list default="true" id="f5fd7905-4c0f-4f79-867d-201a69c1fede" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mega_sena_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
@@ -28,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
+>>>>>>> release/1.1
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,8 +76,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/StoreAndPreferencies" />
-                    <option name="lastUsedInstant" value="1672703466" />
+                    <option name="branchName" value="release/1.0" />
+                    <option name="lastUsedInstant" value="1672708795" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
