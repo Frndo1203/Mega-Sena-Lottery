@@ -25,5 +25,5 @@ contact me :D for any discussion about this.
 
 ## Usage/Examples
 
-![usage](app/src/main/res/drawable/megasena_app_usage.mp4)
+![usage](app/src/main/res/drawable/megasena_app_usage.gif)
 
