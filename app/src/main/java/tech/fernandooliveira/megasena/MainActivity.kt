@@ -1,5 +1,7 @@
 package tech.fernandooliveira.megasena
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -10,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var prefs: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,13 +26,13 @@ class MainActivity : AppCompatActivity() {
         val txtResult: TextView = findViewById(R.id.txt_result)
         val btnGenerate: Button = findViewById(R.id.btn_generate)
 
-        // touch listener
-        // option1: xml
+        prefs = getSharedPreferences("db_prefs", Context.MODE_PRIVATE)
+        val result = prefs.getString("result", null)
+        result?.let {
+            txtResult.text = "Last bet: $result"
+        }
 
-        // option2: using an interface (anonymous object View.OnClickListener)
-        //        btnGenerate.setOnClickListener(buttonClickListener)
-
-        // option3: declaring directly the code block used by the onClick method
+        //generate random numbers
         btnGenerate.setOnClickListener {
 
             val text = editText.text.toString()
@@ -64,23 +69,18 @@ class MainActivity : AppCompatActivity() {
             if (numbers.size == intText) {
                 break
             }
-
-            txtResult.text = numbers.joinToString(" - ")
         }
+        // join numbers
+        val joinedNumbers = numbers.joinToString(" - ")
+        txtResult.text = joinedNumbers
+
+        // save numbers
+
+        prefs.edit().apply {
+            putString("result", joinedNumbers)
+            apply()
+        }
+
+        Log.i("Preference saving", "The numbers $joinedNumbers were saved")
     }
-
-    // option1: xml
-    //    fun buttonClicked(view: View) {
-    //        Log.i("Test", "Button clicked")
-    //    }
-
-    // option2: using an interface (anonymous object View.OnClickListener)
-    //    val buttonClickListener = object : View.OnClickListener {
-    //        // who calls onClick is the Android SDK
-    //        override fun onClick(v: View?) {
-    //            Log.i("Test", "Button clicked")
-    //        }
-    //    val buttonClickListener = View.OnClickListener {
-    //        Log.i("Test", "Button clicked")
-    //    }
 }
