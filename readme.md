@@ -25,7 +25,5 @@ contact me :D for any discussion about this.
 
 ## Usage/Examples
 
-```kotlin
-TODO
-```
+![usage](app/src/main/res/drawable/megasena_app_usage.gif)
 
